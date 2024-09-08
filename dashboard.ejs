@@ -1,0 +1,49 @@
+<% include layout.ejs %>
+
+<section>
+    <h2>Dashboard</h2>
+    
+    <div class="summary">
+        <div class="income">
+            <h3>Total Income</h3>
+            <p>$<%= totalIncome %></p>
+        </div>
+        <div class="expenses">
+            <h3>Total Expenses</h3>
+            <p>$<%= totalExpenses %></p>
+        </div>
+        <div class="balance">
+            <h3>Remaining Balance</h3>
+            <p>$<%= remainingBalance %></p>
+        </div>
+    </div>
+
+    <h3>Recent Transactions</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Amount</th>
+                <th>Category</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% transactions.forEach(transaction => { %>
+                <tr>
+                    <td><%= transaction.date %></td>
+                    <td><%= transaction.description %></td>
+                    <td><%= transaction.amount %></td>
+                    <td><%= transaction.category %></td>
+                    <td>
+                        <a href="/edit-transaction/<%= transaction._id %>">Edit</a>
+                        <form action="/delete-transaction/<%= transaction._id %>" method="POST" style="display:inline;">
+                            <button type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</section>

@@ -1,0 +1,374 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600&family=Lato:wght@400;700&family=Montserrat:wght@400;600&display=swap');
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #000000; /* Black background */
+  margin: 0;
+  padding: 0;
+  color: #E0E0E0; /* Light grey text */
+}
+
+.app {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #1C1C1C; /* Dark grey for content area */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+/* Headers */
+h1, h2, h3 {
+  color: #F5F5F5; /* White headers */
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-family: 'Lato', sans-serif;
+}
+
+h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Containers */
+.container {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card {
+  background-color: #333333; /* Medium grey for card background */
+  border: 1px solid #444444; /* Darker grey border */
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 12px 24px rgba(0,0,0,0.6);
+  transform: translateY(-5px);
+}
+
+/* Buttons */
+button {
+  background-color: #4CAF50; /* Light green for buttons */
+  color: #FFFFFF; /* White text */
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-family: 'Montserrat', sans-serif;
+}
+
+button:hover {
+  background-color: #45A049; /* Darker green on hover */
+  transform: scale(1.03);
+}
+
+button:active {
+  background-color: #388E3C; /* Even darker green on active */
+  transform: scale(0.98);
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="number"],
+textarea {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #555555; /* Medium grey border */
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #1C1C1C; /* Dark grey for input fields */
+  color: #E0E0E0; /* Light grey text */
+  font-family: 'Open Sans', sans-serif;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+  border-color: #F5F5F5; /* White border on focus */
+  outline: none;
+  box-shadow: 0 0 5px rgba(245, 245, 245, 0.3); /* White shadow */
+}
+
+/* Forms */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Lists */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 15px;
+  background-color: #333333; /* Medium grey for list items */
+  border: 1px solid #444444; /* Darker grey border */
+  margin-bottom: 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+li:hover {
+  background-color: #444444; /* Slightly lighter grey on hover */
+  border-color: #F5F5F5; /* White border on hover */
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table, th, td {
+  border: 1px solid #555555; /* Medium grey border */
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  font-family: 'Open Sans', sans-serif;
+}
+
+th {
+  background-color: #4CAF50; /* Light green for table headers */
+  color: #FFFFFF; /* White text for headers */
+  font-weight: 600;
+}
+
+td {
+  background-color: #1C1C1C; /* Dark grey for table cells */
+}
+
+tr:nth-child(even) td {
+  background-color: #2C2C2C; /* Slightly lighter dark grey for even rows */
+}
+
+/* Alerts and Messages */
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+}
+
+.alert.success {
+  background-color: #4CAF50; /* Light green for success */
+}
+
+.alert.error {
+  background-color: #F44336; /* Red for error */
+}
+
+.alert.info {
+  background-color: #2196F3; /* Blue for info */
+}
+
+.alert.warning {
+  background-color: #FF9800; /* Orange for warnings */
+}
+
+/* Enhanced Styles for Graph Component */
+.graph-container {
+  background-color: #ffffff; /* White background for contrast */
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Padding around the content */
+  margin-bottom: 20px; /* Space below the graph */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+  position: relative; /* For positioning the close button */
+}
+
+.graph-container h2 {
+  color: #111822; /* Dark color for the title */
+  font-family: 'Arial', sans-serif; /* Font family for the title */
+}
+
+/* Dashboard Styles */
+.dashboard-container {
+  background-color: #f4f4f4; /* Light gray background for contrast */
+  padding: 20px; /* Padding for content */
+  border-radius: 8px; /* Rounded corners */
+  margin-bottom: 20px; /* Space below the dashboard */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+.dashboard-title {
+  color: #111822; /* Darker title for the dashboard */
+  font-size: 28px; /* Larger font size for the title */
+  margin-bottom: 15px; /* Space below the title */
+  font-family: 'Arial', sans-serif; /* Font family for the title */
+  text-align: center; /* Center the title */
+}
+
+.dashboard-summary {
+  display: flex; /* Flexbox layout for summary items */
+  justify-content: space-between; /* Space between items */
+  gap: 20px; /* Space between summary boxes */
+}
+
+.summary-item {
+  flex: 1; /* Each summary item takes up equal space */
+  padding: 20px; /* Padding inside each item */
+  background-color: #fff; /* White background */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center; /* Center align content */
+}
+
+.summary-item h3 {
+  font-size: 20px; /* Font size for item headings */
+  margin-bottom: 10px; /* Space below the heading */
+  color: #333; /* Darker text color */
+}
+
+.summary-item p {
+  font-size: 24px; /* Larger font size for amounts */
+  font-weight: bold; /* Bold font for amounts */
+  color: #2C5F2D; /* Default color for text (can be changed per item) */
+}
+
+.income {
+  background-color: #D3F9D8; /* Light green background for income */
+  color: #2C5F2D; /* Dark green text */
+}
+
+.expenses {
+  background-color: #FBE9E7; /* Light red background for expenses */
+  color: #E74C3C; /* Dark red text */
+}
+
+.balance {
+  background-color: #E3F2FD; /* Light blue background for balance */
+  color: #1565C0; /* Dark blue text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-summary {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    gap: 10px; /* Reduce the gap between items */
+  }
+
+  .summary-item {
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+
+  .summary-item h3 {
+    font-size: 18px; /* Smaller font size for headings */
+  }
+
+  .summary-item p {
+    font-size: 20px; /* Smaller font size for amounts */
+  }
+}
+
+
+/* Modals */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Darker overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #2C2C2C; /* Dark grey for modal content */
+  padding: 25px;
+  border-radius: 12px;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+}
+
+.modal-header,
+.modal-body,
+.modal-footer {
+  padding: 15px;
+}
+
+.modal-header {
+  border-bottom: 1px solid #444444;
+  font-weight: 600;
+}
+
+.modal-footer {
+  border-top: 1px solid #444444;
+  text-align: right;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #E0E0E0; /* Light grey close button */
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #F5F5F5; /* White color for close button */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .app {
+    padding: 15px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+  
